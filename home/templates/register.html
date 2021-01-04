@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, rgb(137, 209, 137), rgb(95, 95, 236));
+        }
+
+        h1 {
+            text-decoration: underline;
+        }
+
+        .container {
+            margin: auto;
+            width: 30%;
+            border: 3px solid rgb(4, 10, 4);
+            padding: 10px;
+            text-align: center;
+            margin-top: 15%;
+            border-radius: 30px;
+            background-color: aqua;
+        }
+
+        .field {
+            text-align: center;
+            margin: 5px;
+            height: 30px;
+            width: 50%;
+            border: 1px solid black;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        .btn {
+            height: 30px;
+            width: 20%;
+            margin: 25px;
+            background-color: rgb(57, 122, 241);
+            color: cornsilk;
+            border: none;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="register" method="POST" class="register">
+        {% csrf_token %}
+
+        <div class="container">
+            <h1>REGISTER</h1>
+            <input type="text" placeholder="username" name="username" class="field"> <br>
+            <input type="text" placeholder="firstname" name="firstname" class="field"> <br>
+            <input type="text" placeholder="lastname" name="lastname" class="field"> <br>
+            <input type="email" placeholder="Email" name="email" class="field"><br>
+            <input type="password" name="password" placeholder="password" class="field"> <br>
+
+            <input type="Submit" class="btn">
+        </div>
+    </form>
+
+</body>
+
+</html>
