@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'uh*!%j0r-4lyv9sg3h#i)e8i$&sh0p*0xg_95b#9vyd0&9y46m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+'minulandrashik.herokuapp.com', '127.0.0.1:8000']
 
 
 # Application definition
@@ -135,4 +136,5 @@ STATIC_URL = '/static/'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://localhost:3000",
+    'https://minulandrashik.herokuapp.com/',
 ]
